@@ -1,0 +1,530 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Praktikum 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="flex justify-between items-center p-6 bg-white shadow-md">
+      
+      <!-- Logo, Title, and Navigation Links -->
+      <div class="flex items-center space-x-4">
+        <img src="./asset/Polygon 1.svg" alt="" class="w-10 h-10 ml-1.5" />
+        <img
+          src="./asset/uim_clock-three.svg"
+          alt="clock"
+          class="w-5 h-6 absolute flex items-center justify-center"
+        />
+        <div class="text-blue-600 text-2xl font-bold p-1">
+          <span class="font-['Nunito'] text-gray-900">Remind</span
+          ><span class="font-['Nunito']">me</span>
+        </div>
+
+        <!-- Desktop Navigation Links  -->
+        <nav class="hidden md:flex space-x-6 ml-6">
+          <a class="text-blue-600 font-bold font-['Poppins'] text-xl" href="#"
+            >Home</a
+          >
+          <a class="text-gray-900 text-xl" href="#">Features</a>
+          <a class="text-gray-900 text-xl" href="#">About us</a>
+        </nav>
+      </div>
+
+      <!-- Button for About App -->
+      <a
+        class="hidden md:block px-4 py-2 border border-blue-600 text-blue-600 rounded-full"
+        href="#"
+        >About App</a
+      >
+
+      <!-- Mobile Menu Icon -->
+      <button
+        id="menu-toggle"
+        class="block md:hidden focus:outline-none"
+        title="button"
+      >
+        <svg
+          class="w-6 h-6 text-blue-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Sidebar for Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 w-full h-full bg-white bg-opacity-90 hidden md:hidden"
+      >
+        <div class="flex justify-end p-6">
+          <button
+            id="close-menu"
+            class="text-gray-600 focus:outline-none"
+            title="button"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col items-center mt-12 space-y-6">
+          <a class="text-blue-600 font-bold font-['Poppins'] text-2xl" href="#"
+            >Home</a
+          >
+          <a class="text-gray-900 text-2xl" href="#">Features</a>
+          <a class="text-gray-900 text-2xl" href="#">About us</a>
+          <a
+            class="px-4 py-2 border border-blue-600 text-blue-600 rounded-full"
+            href="#"
+            >About App</a
+          >
+        </div>
+      </div>
+    </header>
+    <main class="px-6 py-12">
+        
+      <!-- ============Batas HEADER=============== -->
+      <section class="flex flex-col lg:flex-row items-center lg:space-x-12">
+        <div class="lg:w-1/2 w-full space-y-5 ml-4 lg:ml-9">
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold">Manage</h1>
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold">
+            Schedule and
+          </h1>
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold">Task Easy</h1>
+          <p class="text-gray-600 text-sm md:text-base lg:text-lg">
+            Create and organize schedule and task deadlines become easier, any
+            manager and ordinary people helping behind schedule of activities
+            and task.
+          </p>
+          <button
+            class="px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white rounded-full text-sm md:text-base lg:text-lg"
+          >
+            Download App
+          </button>
+        </div>
+        <div class="lg:w-1/2 w-full mt-8 lg:mt-0">
+
+          <!-- Bagian Mockup Gambar -->
+          <div
+            class="w-full lg:w-[700px] h-[400px] md:h-[600px] lg:h-[750px] relative flex justify-center items-center mx-auto"
+          >
+            <!-- Background biru terang dan elemen lingkaran -->
+            <div
+              class="w-full lg:w-[700px] h-[400px] md:h-[600px] lg:h-[750px] absolute bg-[#edf4ff] rounded-bl-[50px] md:rounded-bl-[80px] lg:rounded-bl-[100px]"
+            ></div>
+            <div
+              class="w-full lg:w-[700px] h-[420px] md:h-[620px] lg:h-[838px] absolute bg-[#d6e5fd] rounded-bl-[50px] md:rounded-bl-[80px] lg:rounded-bl-[100px] shadow-md"
+            ></div>
+
+            <!-- Lingkaran Dekoratif -->
+            <div
+              class="w-[150px] md:w-[250px] lg:w-[313px] h-[150px] md:h-[250px] lg:h-[313px] absolute left-[150px] md:left-[300px] lg:left-[400px] top-[300px] md:top-[450px] lg:top-[500px] rounded-full border-4 md:border-6 lg:border-8 border-[#f5f8ff]"
+            ></div>
+
+            <!-- Mockup ponsel -->
+            <div
+              class="w-[200px] md:w-[250px] lg:w-[294px] h-[400px] md:h-[500px] lg:h-[610px] absolute top-[50px] md:top-[80px] lg:top-[100px]"
+            >
+              <div
+                class="w-full h-full bg-white rounded-[30px] md:rounded-[40px] lg:rounded-[45px] backdrop-blur-[10px]"
+              ></div>
+              <img
+                class="w-[180px] md:w-[230px] lg:w-[270px] h-[383px] md:h-[483px] lg:h-[583px] absolute left-[10px] md:left-[11px] lg:left-[12px] top-[10px] md:top-[12px] lg:top-[13px]"
+                src="./asset/1task 2.png"
+                alt="Mockup app"
+              />
+              <div
+                class="w-[90px] md:w-[120px] lg:w-[140px] h-[25px] md:h-[30px] lg:h-[35px] absolute left-[55px] md:left-[67px] lg:left-[77px] top-0 bg-white rounded-bl-[15px] md:rounded-bl-[20px] lg:rounded-bl-[20px] rounded-br-[15px] md:rounded-br-[20px] lg:rounded-br-[20px]"
+              ></div>
+            </div>
+
+            <!-- User Download -->
+            <div
+              class="w-[150px] md:w-[190px] lg:w-[210px] h-[80px] md:h-[90px] lg:h-[100px] absolute top-[400px] md:top-[500px] lg:top-[563px] left-[40px] md:left-[60px] lg:left-[80px]"
+            >
+              <div
+                class="w-full h-full bg-white rounded-[20px] md:rounded-[25px] shadow-lg"
+              ></div>
+              <div
+                class="absolute top-[10px] md:top-[15px] lg:top-[20px] left-[15px] md:left-[18px] lg:left-[23px] text-center"
+              >
+                <div
+                  class="text-[#2d76f9] text-3xl md:text-4xl lg:text-5xl font-semibold font-['Poppins'] tracking-widest"
+                >
+                  50.000
+                </div>
+                <div
+                  class="text-neutral-500 text-xs md:text-sm lg:text-base font-normal font-['Poppins']"
+                >
+                  User Download
+                </div>
+              </div>
+            </div>
+
+            <!-- Easy to Use -->
+            <div
+              class="w-[160px] md:w-[190px] lg:w-[225px] h-[60px] md:h-[70px] lg:h-[75px] absolute top-[100px] md:top-[120px] lg:top-[150px] left-[70px] md:left-[110px] lg:left-[137px]"
+            >
+              <div
+                class="w-full h-full bg-white rounded-[20px] md:rounded-[25px] shadow-lg"
+              ></div>
+              <div
+                class="absolute left-[10px] md:left-[12px] lg:left-[14px] top-[10px] md:top-[12px] lg:top-[13px] flex items-center space-x-2"
+              >
+                <div
+                  class="w-[70px] md:w-[90px] lg:w-[106px] h-[40px] md:h-[45px] lg:h-[50px] bg-[#2d76f9] rounded-[10px] md:rounded-[15px] flex items-center justify-center text-white text-lg md:text-xl lg:text-2xl font-semibold font-['Poppins']"
+                >
+                  Easy
+                </div>
+                <div
+                  class="text-[#2d76f9] text-lg md:text-xl lg:text-2xl font-medium font-['Poppins']"
+                >
+                  to use
+                </div>
+              </div>
+            </div>
+
+            <!-- An interesting UI -->
+            <div
+              class="w-[180px] md:w-[210px] lg:w-[230px] h-[60px] md:h-[70px] lg:h-[78px] absolute top-[220px] md:top-[270px] lg:top-[315px] left-[200px] md:left-[300px] lg:left-[369px]"
+            >
+              <div
+                class="w-full h-full bg-white rounded-[20px] md:rounded-[25px] shadow-lg"
+              ></div>
+              <div
+                class="absolute top-[10px] md:top-[15px] lg:top-[20px] left-[10px] md:left-[14px] lg:left-[16px] flex items-center space-x-2"
+              >
+                <div
+                  class="text-[#2d76f9] text-lg md:text-xl lg:text-2xl font-medium font-['Poppins']"
+                >
+                  An interesting
+                </div>
+                <div
+                  class="w-[40px] md:w-[50px] lg:w-[60px] h-[40px] md:h-[45px] lg:h-[50px] bg-[#2d76f9] rounded-[10px] md:rounded-[15px] flex items-center justify-center text-white text-lg md:text-xl lg:text-2xl font-semibold font-['Poppins']"
+                >
+                  UI
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================================== -->
+      <section class="mt-28 grid grid-cols-1 md:grid-cols-3 gap-8 mt-44">
+        <div class="text-center space-y-4">
+          <div
+            class="w-16 h-16 mx-auto bg-[#eef4ff] rounded-full flex items-center justify-center"
+          >
+            <i
+              class="text-2xl w-[55px] h-[55px] bg-[#eef4ff] rounded-[100px] bg-[url('./asset/uim_schedule.svg')]"
+            >
+              <!-- Bagian foto paling kiri -->
+            </i>
+          </div>
+          <h3 class="text-xl font-extrabold">Set a better deadline tasks</h3>
+          <p class="text-gray-600">
+            You can make your daily deadline better and more orderly
+          </p>
+        </div>
+        <div class="text-center space-y-4">
+          <div
+            class="w-16 h-16 mx-auto bg-[#eef4ff] rounded-full flex items-center justify-center"
+          >
+            <i
+              class="text-2xl w-[55px] h-[55px] bg-[#eef4ff] rounded-[100px] bg-[url('./asset/uim_layer-group.svg')]"
+            >
+              <!-- kode diatas Bagian foto tengah  -->
+            </i>
+          </div>
+          <h3 class="text-xl font-extrabold">Manage the tasks so easily</h3>
+          <p class="text-gray-600">
+            You can manage the deadlines and the schedules become easy
+          </p>
+        </div>
+        <div class="text-center space-y-4">
+          <div
+            class="w-16 h-16 mx-auto bg-[#eef4ff] rounded-full flex items-center justify-center"
+          >
+            <i
+              class="text-2xl w-[50px] h-[52px] bg-[#eef4ff] rounded-[100px] bg-[url('./asset/ri_notification-fill.svg')]"
+            >
+              <!-- foto di bagian lonceng -->
+            </i>
+          </div>
+          <h3 class="text-xl font-extrabold">Wouldn't miss notifications</h3>
+          <p class="text-gray-600">
+            Of course you will always get the tasks schedule notifications
+          </p>
+        </div>
+      </section>
+
+      <!-- ===============BATAS KONTEN, BAGIAN SET UP================= -->
+      <section
+        class="mt-16 flex flex-col lg:flex-row items-center lg:space-x-20 pt-20 px-4 lg:px-0"
+      >
+        <!-- Bagian Kiri: Gambar Grid -->
+        <div
+          class="lg:w-1/2 w-full h-[300px] md:h-[400px] lg:h-[500px] bg-[#d6e5fd] rounded-tr-[50px] md:rounded-tr-[80px] lg:rounded-tr-[100px] rounded-br-[50px] md:rounded-br-[80px] lg:rounded-br-[100px] relative mx-auto overflow-hidden"
+        >
+          <img
+            alt="Device"
+            src="./asset/device.png"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+
+        <!-- Bagian Kanan: Teks -->
+        <div
+          class="lg:w-1/2 w-full mt-10 md:mt-14 lg:mt-0 space-y-4 md:space-y-6 text-center lg:text-left"
+        >
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+            Set up task and schedule with the best features
+          </h2>
+          <p
+            class="text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed"
+          >
+            The best features make you better, with the latest technology to
+            meet your needs. Organize schedules and lead assignments more easily
+            with this application. Get it now!
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================BAGIAN KONTEN  GET THE HIGHEST========================= -->
+      <section
+        class="mt-16 flex flex-col lg:flex-row items-center lg:space-x-12"
+      >
+        <div class="lg:w-1/2 space-y-6">
+          <h2 class="text-3xl font-bold text-center">
+            Get the highest priority application notification
+          </h2>
+          <p class="text-gray-600 text-center">
+            The best features meets your needs, with the latest technology to
+            meet your needs. Of course, with such features as organizing
+            schedules and loading assignments. It will make you easier, so get
+            the application now !
+          </p>
+        </div>
+        <div
+          class="lg:w-1/2 mt-12 lg:mt-0 bg-blue-100 rounded-tl-custom-100 rounded-bl-custom-100"
+        >
+          <img
+            alt="foto hp"
+            class="w-full"
+            height="500"
+            src="./asset/1taskk 1.png"
+            width="500"
+          />
+        </div>
+      </section>
+
+      <!-- =========Bagian Konten Download app =============-->
+      <section
+        class="mt-16 bg-blue-600 text-white text-center py-12 rounded-lg pb-24 mb-28"
+      >
+        <h2 class="text-3xl font-bold">
+          Download an app now and the various benefits you will get immediately
+        </h2>
+        <div class="mt-8 space-x-4">
+          <button class="px-6 py-3 bg-white text-blue-600 rounded-full">
+            Download App
+          </button>
+          <button class="px-6 py-3 border border-white rounded-full">
+            About App
+          </button>
+        </div>
+      </section>
+
+      <!-- ====================konten bawah bagian what do they think================== -->
+      <div class="p-8">
+        <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
+         
+          <!-- ===BAGIAN FOTO AVATAR=== -->
+          <div class="flex justify-center md:justify-end w-full md:w-1/2">
+            <img
+              src="./asset/testi.svg"
+              class="w-full max-w-md lg:w-auto lg:max-w-full"
+              alt="testimoni"
+            />
+          </div>
+
+          <div class="w-full md:w-1/2 text-center md:text-left space-y-4">
+            <h3
+              class="text-lg md:text-4xl text-4xl font-semibold font-['Poppins'] leading-[65px]"
+            >
+              What do they think
+            </h3>
+            <div class="border p-6 rounded-lg shadow-lg">
+              <div class="flex items-center gap-4 mb-4">
+
+                <!-- BAGIAN FOTO (PROFIL) -->
+                <img
+                  src="./asset/CACA.jpeg"
+                  alt="Profile"
+                  class="w-12 h-12 rounded-full"
+                />
+                <div>
+                  <p class="font-semibold">ZAHRAH SALSABILA DHIA ICHSANDI</p>
+                  <p class="text-sm text-gray-500">
+                    Student at University Ahmad Dahlan, Information System
+                  </p>
+                </div>
+              </div>
+              <p class="leading-relaxed">
+                “ Hi, it's Zahrah Salsabila Dhia Ichsandi. After using it made me a lot of
+                benefits, starting with convenience of setting a deadline of
+                tasks and schedule after that the app is very simple using. “
+              </p>
+            </div>
+
+            <!-- FOTO BAGIAN PANAH KANAN & KIRI -->
+            <div class="flex justify-center md:justify-start gap-4 mt-4">
+              <button class="text-blue-500">
+                <img src="./asset/la_arrow-left.svg" alt="panah kiri" />
+              </button>
+              <button class="text-blue-500">
+                <img src="./asset/la_arrow-right.svg" alt="panah kanan" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===============BAGIAN FOOTER============== -->
+      <section>
+        <div class="w-full bg-white py-12 pt-4 mt-32">
+          <div
+            class="max-w-screen-xl mx-auto flex flex-col lg:flex-row justify-between items-start space-y-8 lg:space-y-0"
+          >
+            <div class="flex flex-col items-start space-y-4 lg:w-1/3">
+              <div class="flex items-center space-x-2">
+                <div
+                  class="w-10 h-10 bg-blue-200 flex items-center justify-center rounded-full"
+                >
+                  <img src="./asset/Polygon 1.svg" alt="logo" class="w-6 h-6" />
+                </div>
+                <div class="text-3xl font-semibold font-nunito">
+                  <span class="text-[#212121]">Remind</span
+                  ><span class="text-[#2d76f9]">me</span>
+                </div>
+              </div>
+              <p
+                class="text-neutral-500 text-lg font-normal font-poppins leading-9"
+              >
+                Task deadlines and scheduling applications with various benefits
+                and advantages.
+              </p>
+            </div>
+
+            <div class="flex flex-col items-start space-y-4 lg:w-1/6">
+              <h3 class="text-black text-2xl font-semibold font-poppins">
+                Sitemaps
+              </h3>
+              <ul class="space-y-2 text-neutral-500 text-lg font-poppins">
+                <li><a href="#" class="hover:text-blue-600">• Home</a></li>
+                <li><a href="#" class="hover:text-blue-600">• Features</a></li>
+                <li><a href="#" class="hover:text-blue-600">• About Us</a></li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col items-start space-y-4 lg:w-1/6">
+              <h3 class="text-black text-2xl font-semibold font-poppins">
+                Advantages
+              </h3>
+              <ul class="space-y-2 text-neutral-500 text-lg font-poppins">
+                <li>
+                  <a href="#" class="hover:text-blue-600">• Set Task Better</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-blue-600">• Easy Manage</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-blue-600">• Get Notification</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- BAGIAN FB TWT LINKEDIN -->
+            <div class="flex flex-col items-start space-y-5 lg:w-1/6">
+              <h3 class="text-black text-2xl font-semibold font-poppins">
+                Follow Us
+              </h3>
+              <div class="flex space-x-6">
+                <a
+                  href="#"
+                  title="facebook"
+                  class="text-blue-600 hover:text-blue-800 text-2xl"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  title="twitter"
+                  class="text-blue-600 hover:text-blue-800 text-2xl"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  title="linkedin"
+                  class="text-blue-600 hover:text-blue-800 text-2xl"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      // kode js for side bar atas
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
